@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta info for the browser -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
-    <title>Weather</title>
+    <title>Weather App</title>
 
-    <!-- favicon for the browser tab -->
+    <!-- favicon for browser tab -->
     <link rel="icon" type="image/png" href="images/weather-icon.png">
     
-    <!-- apple touch icon -->
+    <!-- apple touch icon for mobile home screen -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/weather-icon.png">
     
-    <!-- manifest file  -->
+    <!-- manifest file for home screen functionality -->
     <link rel="manifest" href="manifest.json">
 
-    <!-- bootstrap -->
+    <!-- bootstrap for responsive styling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <!-- FontAwesome for weather icons -->
+    <!-- fontawesome for weather icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 </head>
 <body class="container text-center mt-4">
 
     <!-- app title -->
     <h1>Weather</h1>
 
-    <!-- input field and button -->
+    <!-- input field and button group -->
     <div class="input-group mt-3">
-        <!-- box where users type a city -->
-        <input type="text" id="cityInput" class="form-control" placeholder="enter city name">
+        <input type="text" id="cityInput" class="form-control" placeholder="Enter city name"
+            aria-label="Enter a city name to get the weather">
         
-        <!-- button to get weather -->
-        <button class="btn btn-primary" onclick="getWeather()">get weather</button>
+        <button class="btn btn-primary" onclick="getWeather()" aria-label="Get weather for entered city">
+            Get Weather
+        </button>
     </div>
 
     <!-- button for using current location -->
-    <button class="btn btn-secondary mt-2" onclick="getLocation()">use my location</button>
+    <button class="btn btn-secondary mt-2" onclick="getLocation()" aria-label="Use my current location">
+        Use My Location
+    </button>
 
-    <!-- area where weather info shows up -->
-    <div id="weatherInfo" class="mt-4"></div>
+    <!-- weather display section (announced by screen readers when updated) -->
+    <div id="weatherInfo" class="mt-4" aria-live="polite"></div>
 
-    <!-- 3-day forecast heading -->
-    <h2 class="mt-4">3-day forecast</h2>
+    <!-- forecast section (announced by screen readers when updated) -->
+    <h2 class="mt-4">3-Day Forecast</h2>
+    <div id="forecast" class="d-flex justify-content-center" aria-live="polite"></div>
 
-    <!-- section for forecast cards -->
-    <div id="forecast" class="d-flex justify-content-center"></div>
-
-    <!-- bootstrap js-->
+    <!-- bootstrap javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- javascript file -->
+    <!-- javascript file for app logic -->
     <script src="script.js"></script>
 </body>
 </html>

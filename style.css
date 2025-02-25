@@ -1,0 +1,78 @@
+/* set background color and font */
+body {
+    background-color: #6a0dad; 
+    font-family: Arial, sans-serif;
+    color: #ffffff; 
+}
+
+/* style the main title */
+h1 {
+    color: #ffd700; 
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* weather info box */
+#weatherInfo {
+    padding: 20px;
+    background: #ffd700; 
+    color: #6a0dad; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+/* forecast section */
+#forecast {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* individual forecast cards */
+.forecast-card {
+    background: #ffd700; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 120px;
+    text-align: center;
+    color: #6a0dad; 
+}
+
+/* input field styling */
+.input-group {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* button styles */
+.btn-primary {
+    background-color: #ffd700; 
+    border: none;
+    color: #6a0dad; 
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #e6c200; 
+}
+
+.btn-secondary {
+    background-color: #6a0dad; 
+    border: none;
+    color: #ffd700; 
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #5a0bb5; 
+}
+
+/* style the icons */
+i {
+    color: #6a0dad; 
+}
